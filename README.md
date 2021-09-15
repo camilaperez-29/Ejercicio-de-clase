@@ -1,2 +1,2 @@
-# Ejercicio-de-clase
+# Ejercicio-de-clase 1
 función tangente inversa
