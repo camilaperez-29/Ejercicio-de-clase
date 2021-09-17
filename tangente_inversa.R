@@ -31,10 +31,10 @@ print(pi)
 
 #ejercicio b
 
+
 resultado = 0          #inicializa acomulador          
 i = 0                  #inicializa contador
 bandera = 'false'      #inicializa bandera
-
 
 while(bandera == 'false' ){           
   i = i+1
@@ -48,8 +48,23 @@ while(bandera == 'false' ){
 }
 sprintf("el numero de terminos de (n) es: %d ",i)
 
+#otra manera de realizar el ejercicio b"
 
 
+arctan <- function (x,t){
+  sumatoria = 0
+  for (i in 1:10000){
+    termino   = (-1)^(i+1) * ((x)^(2*i-1)) / (2*i-1)
+    pi_aprox  = 4 * termino
+    sumatoria = sumatoria + pi_aprox
+    ult_ter   = abs(sumatoria - pi)
+    if(ult_ter < t){
+      break
+    }
+  }
+  return(i)
+}
 
 
+arctan(1,0.001)
 
