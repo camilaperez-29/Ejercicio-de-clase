@@ -25,29 +25,28 @@ arctan <- function (n,x){
 
 #ejercicio a 
 
-pi = 4*arctan(1000,1)
+pi2 = 4*arctan(1000,1)
 print(pi)
 
 
 #ejercicio b
 
- 
-                         
 resultado = 0          #inicializa acomulador          
 i = 0                  #inicializa contador
 bandera = 'false'      #inicializa bandera
 
-while( resultado >= 0 & resultado <= 4 & bandera == 'false' ){           
+
+while(bandera == 'false' ){           
   i = i+1
   sumatoria = (-1)^(i+1) * ((1)^(2*i-1)) / (2*i-1)
-  pi = 4 * sumatoria
-  resultado = resultado + pi
-  if(resultado > 3.1405926 & resultado < 3.1425926){
+  pi_aprox = 4 * sumatoria
+  resultado = resultado + pi_aprox
+  pi_error = abs(pi - resultado)
+  if(pi_error < 0.001){
     bandera = 'true'
   }
 }
 sprintf("el numero de terminos de (n) es: %d ",i)
-
 
 
 
